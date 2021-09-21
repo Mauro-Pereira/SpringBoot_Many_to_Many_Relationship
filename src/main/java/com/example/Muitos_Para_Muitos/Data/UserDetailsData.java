@@ -12,6 +12,8 @@ import com.example.Muitos_Para_Muitos.Models.Student;
 public class UserDetailsData implements UserDetails{
 	
 	
+	private static final long serialVersionUID = 1L;
+	
 	private final Optional<Student> student;
 	
 	
