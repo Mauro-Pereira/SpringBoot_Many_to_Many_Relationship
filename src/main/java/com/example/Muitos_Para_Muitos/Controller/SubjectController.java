@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,7 +20,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/subject")
-@Api(tags = "subject") //for swagger
+@Api(tags = "subject") //swagger
 public class SubjectController {
 	
 	@Autowired
@@ -27,7 +28,7 @@ public class SubjectController {
 	
 	@PostMapping("/addSubject")
     @ApiOperation(value = "This method add subjects.")
-	public ResponseEntity<?> addSubject(Subject subject) throws ValueAlreadyExistsException, ValueNotExists{
+	public ResponseEntity<?> addSubject(@RequestBody Subject subject) throws ValueAlreadyExistsException, ValueNotExists{
 		
 		try {
 			
