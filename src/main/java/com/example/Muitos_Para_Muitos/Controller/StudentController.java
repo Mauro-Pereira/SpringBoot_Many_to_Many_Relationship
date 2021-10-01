@@ -21,7 +21,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/student")
-@Api(tags = "student") //for swagger
+@Api(tags = "student") //swagger
 public class StudentController {
 	
 	@Autowired
